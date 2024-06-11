@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var button = document.getElementById("myButton");
-    button.addEventListener("click", function() {
-        alert("按钮被点击了！");
+    const form = document.getElementById('contact-form');
+    
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        console.log('Form submitted:', { name, email, message });
+        
+        alert('Thank you for your message, ' + name + '! I will get back to you soon.');
+        
+        form.reset();
     });
 });
