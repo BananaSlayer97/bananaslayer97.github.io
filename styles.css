@@ -3,6 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    padding-bottom: 80px; /* 增加底部填充以确保表单不被遮挡 */
 }
 
 header {
